@@ -20,23 +20,6 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
   bool _showNotch = true;
   FloatingActionButtonLocation _fabLocation = FloatingActionButtonLocation.endDocked;
 
-  void _onShowNotchChanged(bool value) {
-    setState(() {
-      _showNotch = value;
-    });
-  }
-
-  void _onShowFabChanged(bool value) {
-    setState(() {
-      _showFab = value;
-    });
-  }
-
-  void _onFabLocationChanged(FloatingActionButtonLocation? value) {
-    setState(() {
-      _fabLocation = value ?? FloatingActionButtonLocation.endDocked;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,12 +33,6 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
         body: ListView(
           padding: const EdgeInsets.only(bottom: 88),
           children: <Widget>[
-            SwitchListTile(
-              title: const Text('-fab- Lock environment '),
-              value: _showFab,
-              onChanged: _onShowFabChanged,
-              activeColor: Colors.teal,
-            ),
             const Padding(
               padding: EdgeInsets.all(16),
               child: Text('Text Above Dragging Box'),
